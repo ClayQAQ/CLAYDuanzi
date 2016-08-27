@@ -1,0 +1,42 @@
+//
+//  PrefixHeader.pch
+//  项目四
+//
+//  Created by CLAY on 16/5/26.
+//  Copyright © 2016年 CLAY. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UIView+CLAYExtension.h"
+#import "UIBarButtonItem+CLAY.h"
+#import "NSDate+CLAYExt.h"
+#import "UIImageView+CLAYProfileCircleImageView.h"
+
+
+
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+#define CLAYDidClickTabBarNotification @"CLAYDidClickTabBarNotification"
+
+
+
+#ifdef DEBUG
+#define CLAYLog(...) NSLog(__VA_ARGS__)
+#else
+#define CLAYLog 
+#endif
+
+#define CLAYLogFunc CLAYLog(@"%s",__func__)
+
+
+
+#define CLAYRGBColor(R,G,B) [UIColor colorWithRed:(R)/255.0 green:(G)/255.0 blue:(B)/255.0 alpha:1]
+
+
+
+
+
+
+#endif /* PrefixHeader_pch */

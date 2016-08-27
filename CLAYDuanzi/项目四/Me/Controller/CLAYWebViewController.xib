@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CLAYWebViewController">
+            <connections>
+                <outlet property="goBackItem" destination="qrL-xT-IsP" id="3tU-hb-8HX"/>
+                <outlet property="goForwardItem" destination="sGj-7z-V1s" id="KCZ-Mm-Tt6"/>
+                <outlet property="progressView" destination="cSO-7x-f2E" id="K7Q-pm-68R"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="z9f-ZF-Q3M" id="4OO-F2-gfc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="290" height="380"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z9f-ZF-Q3M">
+                    <rect key="frame" x="0.0" y="0.0" width="290" height="336"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                </webView>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cSO-7x-f2E">
+                    <rect key="frame" x="0.0" y="64" width="290" height="2"/>
+                </progressView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FFz-HJ-fk0">
+                    <rect key="frame" x="0.0" y="336" width="290" height="44"/>
+                    <items>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="2fb-Ff-h8d"/>
+                        <barButtonItem enabled="NO" title="&lt;" id="qrL-xT-IsP">
+                            <connections>
+                                <action selector="goBackItem:" destination="-1" id="fXv-Ty-FV6"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="9x0-Ha-ZPi"/>
+                        <barButtonItem enabled="NO" title="&gt;" id="sGj-7z-V1s">
+                            <connections>
+                                <action selector="goForwardItem:" destination="-1" id="MhM-nJ-cSe"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="flexibleSpace" id="TpJ-hg-dhh"/>
+                        <barButtonItem systemItem="refresh" id="AaG-gC-M02">
+                            <connections>
+                                <action selector="refreshItem:" destination="-1" id="ugt-Cl-wwN"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="z9f-ZF-Q3M" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BuT-TS-CU3"/>
+                <constraint firstItem="cSO-7x-f2E" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="aTq-1s-Bfw"/>
+                <constraint firstItem="FFz-HJ-fk0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bcN-JI-a4G"/>
+                <constraint firstItem="cSO-7x-f2E" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="en3-Ff-FLW"/>
+                <constraint firstItem="FFz-HJ-fk0" firstAttribute="top" secondItem="z9f-ZF-Q3M" secondAttribute="bottom" id="mxP-WV-eeT"/>
+                <constraint firstItem="z9f-ZF-Q3M" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nNE-mU-prK"/>
+                <constraint firstAttribute="trailing" secondItem="cSO-7x-f2E" secondAttribute="trailing" id="phY-yE-pJy"/>
+                <constraint firstAttribute="bottom" secondItem="FFz-HJ-fk0" secondAttribute="bottom" id="rOZ-dC-aTa"/>
+                <constraint firstAttribute="trailing" secondItem="FFz-HJ-fk0" secondAttribute="trailing" id="rgy-Et-6UD"/>
+                <constraint firstAttribute="trailing" secondItem="z9f-ZF-Q3M" secondAttribute="trailing" id="tE9-q0-p5y"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="469" y="242"/>
+        </view>
+    </objects>
+</document>
